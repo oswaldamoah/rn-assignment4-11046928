@@ -39,6 +39,6 @@ The `JobCard` component represents individual job listings. It includes:
 
 
 ## Screenshots
-![Screenshot 1](path/to/screenshot1.png)
-![Screenshot 2](path/to/screenshot2.png)
-![Screenshot 3](path/to/screenshot3.png)
+![Screenshot 1](./assets/screenshot2.jpg)
+
+![Screenshot 2](./assets/screenshot1.jpg)
