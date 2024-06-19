@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 const LoginScreen = ({ navigation }) => {
   const [name, setName] = useState('');
@@ -46,13 +46,13 @@ const LoginScreen = ({ navigation }) => {
       <Text style={styles.orText}>Or continue with</Text>
       <View style={styles.socialButtons}>
         <TouchableOpacity style={styles.socialButton}>
-          <Text style={styles.socialButtonText}>Apple</Text>
+          <Image source={require('./assets/apple.png')} style={styles.socialIcon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <Text style={styles.socialButtonText}>Google</Text>
+          <Image source={require('./assets/google.png')} style={styles.socialIcon} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
-          <Text style={styles.socialButtonText}>Facebook</Text>
+          <Image source={require('./assets/facebook.png')} style={styles.socialIcon} />
         </TouchableOpacity>
       </View>
       <TouchableOpacity onPress={() => navigation.navigate('Register')}>
@@ -125,17 +125,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   socialButton: {
-    backgroundColor: '#E0E0E0',
-    paddingVertical: 12,
-    paddingHorizontal: 15,
-    borderRadius: 5,
     flex: 1,
     alignItems: 'center',
     marginHorizontal: 5,
   },
-  socialButtonText: {
-    color: '#000',
-    fontSize: 16,
+  socialIcon: {
+    width: 60,
+    height: 40,
+    resizeMode: 'contain',
   },
   registerText: {
     color: '#20539D',
