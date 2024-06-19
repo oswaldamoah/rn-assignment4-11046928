@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList, TextInput, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, TextInput, Image, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import JobCard from './JobCard';
 
 const jobs = [
@@ -15,13 +15,13 @@ const jobs = [
 
   // Popular Jobs
   { id: '9', title: 'Full Stack Developer', company: 'Amazon', location: 'Seattle, WA', salary: '$150,000', featured: false, image: require('./assets/amazon.png') },
-  { id: '10', title: 'Backend Engineer', company: 'Netflix', location: 'Los Gatos, CA', salary: '$140,000', featured: false, image: require('./assets/netflix.png') },
-  { id: '11', title: 'Front End Developer', company: 'Airbnb', location: 'San Francisco, CA', salary: '$130,000', featured: false, image: require('./assets/airbnb.png') },
-  { id: '12', title: 'Content Writer', company: 'BBC News', location: 'Remote', salary: '$80,000', featured: false, image: require('./assets/bbc.png') },
+  { id: '10', title: 'Content Writer', company: 'BBC News', location: 'Remote', salary: '$80,000', featured: false, image: require('./assets/bbc.png') },
+  { id: '11', title: 'Hospitality Representative', company: 'Burj Khalifa', location: 'Dubai, UAE', salary: '$45,000', featured: false, image: require('./assets/burj.png') },
+  { id: '12', title: 'Front End Developer', company: 'Airbnb', location: 'San Francisco, CA', salary: '$130,000', featured: false, image: require('./assets/airbnb.png') },
   { id: '13', title: 'Graphic Designer', company: 'Native Magazine', location: 'Abuja, Nigeria', salary: '$6,000 negotiable', featured: false, image: require('./assets/nativemag.png') },
   { id: '14', title: 'Web Developer', company: 'YouTube', location: 'Miami, FL', salary: '$70,000', featured: false, image: require('./assets/youtube.png') },
   { id: '15', title: 'Social Media Manager', company: 'DefJam Recordings', location: 'Austin, TX', salary: '$55,000', featured: false, image: require('./assets/defjam.png') },
-  { id: '16', title: 'Hospitality Representative', company: 'Burj Khalifa', location: 'Dubai, UAE', salary: '$45,000', featured: false, image: require('./assets/burj.png') },
+  { id: '16', title: 'Backend Engineer', company: 'Netflix', location: 'Los Gatos, CA', salary: '$140,000', featured: false, image: require('./assets/netflix.png') },
 ];
 
 const HomeScreen = ({ route }) => {
@@ -35,6 +35,7 @@ const HomeScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
+        <Text></Text> 
       <View style={styles.header}>
         <View style={styles.userInfo}>
           <Text style={styles.name}>{name}</Text>
@@ -76,6 +77,7 @@ const HomeScreen = ({ route }) => {
           renderItem={renderPopularJobs}
           keyExtractor={(item) => item.id}
           showsVerticalScrollIndicator={false}
+          
         />
       </View>
     </View>
